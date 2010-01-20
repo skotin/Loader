@@ -29,7 +29,7 @@ session_start();
  <select name="base" id="base">
      <option value="none">Выберите целевую базу</option>
      <option value="olymp">Всероссийская олимпиада</option>
-     <option value="dolymp">Областная олимпиада</option>
+     <option value="rolymp">Областная олимпиада</option>
  </select>
   <input type="hidden" name="submitted" value="yes" />
       <input type="file" class="fileselect" name="filename" value="Выбрать файл "/>
@@ -38,6 +38,9 @@ session_start();
  <?
   if(isset($_SESSION['upload_message'])){
     echo "<p class=\"message\">".$_SESSION['upload_message']."</p>";
+  }
+if(isset($_SESSION['dubl_message'])){
+    echo "<p class=\"dubl\">".$_SESSION['dubl_message']."</p>";
   }
 ?>
 
@@ -50,9 +53,13 @@ session_start();
   if(isset($_SESSION['upload_message'])){
     unset($_SESSION['upload_message']);
   }
+  if(isset($_SESSION['dubl_message'])){
+    unset($_SESSION['dubl_message']);
+  }
   if(isset($_POST['submitted'])){
     $_POST['submitted']=0;
   }
+
 ?>
 
 </div>

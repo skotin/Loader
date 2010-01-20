@@ -71,6 +71,12 @@ select {
 
 .message {
     color: #fff;
+    background-color:lawngreen;
+    text-align:center;
+}
+
+.dubl {
+    color: #fff;
     background-color: crimson;
     text-align:center;
 }
