@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ebebeb;
+    font: 23px Calibri;
+    color: #505050;
+    width: 100%; /*text-align: center;*/
+}
+
+a:link {
+    text-decoration: underline;
+    font-weight: bold;
+    color: #0000FF;
+}
+
+a:visited {
+    text-decoration: underline;
+    font-weight: bold;
+    color: #0000FF
+}
+
+a:active, a:hover {
+    text-decoration: none;
+    font-weight: bold;
+    color: #0099FF;
+}
+
+a.active:link {
+    text-decoration: none;
+    color: #CC33CC
+}
+
+a.active:visited {
+    text-decoration: none;
+    color: #CC33CC
+}
+
+ul li {
+    list-style: none;
+}
+
+a img {
+    border: 0;
+}
+
+#container {
+    text-align: left; /*position: relative;*/
+    background-color: #fff;
+    padding: 0;
+    z-index: 10;
+    position: relative;
+    margin: 2em auto; /*width: 1200px;*/
+    width: 60%;
+
+}
+h1 {
+    color:#777;
+}
+#content {
+    padding:100px;
+    border:solid 10px #ccc;
+}
+
+input, select {
+font: 20px Calibri;
+}
+
+select {
+    margin-bottom:2em;
+}
+
+.message {
+    color: #fff;
+    background-color: crimson;
+    text-align:center;
+}
+

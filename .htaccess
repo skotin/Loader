@@ -1,0 +1,4 @@
+php_flag session.bug_compat_warn 0
+php_value register_globals 0
+AddDefaultCharset utf-8
+AddHandler application/x-httpd-php .php .html .htm
