@@ -1,6 +1,6 @@
 <?php
 session_start();
-  include("baseConnect.php");
+  include("lib/baseConnect.php");
 ?>
 
 
@@ -33,17 +33,28 @@ session_start();
  </select>
   <input type="hidden" name="submitted" value="yes" />
       <input type="file" class="fileselect" name="filename" value="Выбрать файл "/>
-      <input type="submit" class="btn" value="Загрузить файл"/>
+      <input type="submit" class="btn" value="Загрузить данные в базу"/>
    </form>
  <?
-  if(isset($_SESSION['upload_message'])){
+
+if(isset($_SESSION['upload_message'])){
     echo "<p class=\"message\">".$_SESSION['upload_message']."</p>";
   }
 if(isset($_SESSION['dubl_message'])){
     echo "<p class=\"dubl\">".$_SESSION['dubl_message']."</p>";
   }
-?>
 
+  if(isset($_SESSION['saved'])){
+    echo "<div class=\"saved\"> <h3>Внесено:</h3> ".$_SESSION['saved']."</div>";
+  }  
+
+?>
+<div class="help">
+<strong>N.B.:</strong> Excel файл должен быть записан в формате Excel 97-2003 Workbook.<br/>
+ Все ячейки должны иметь текстовый формат и не содержать Excel формул<br/>
+ <a href="Example_for_TZ.xls">&raquo; Скачать образец файла</a>
+
+</div>
 
  </div>
 
@@ -52,6 +63,9 @@ if(isset($_SESSION['dubl_message'])){
 <?
   if(isset($_SESSION['upload_message'])){
     unset($_SESSION['upload_message']);
+  }
+ if(isset($_SESSION['saved'])){
+    unset($_SESSION['saved']);
   }
   if(isset($_SESSION['dubl_message'])){
     unset($_SESSION['dubl_message']);

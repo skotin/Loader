@@ -35,10 +35,6 @@ a.active:visited {
     color: #CC33CC
 }
 
-ul li {
-    list-style: none;
-}
-
 a img {
     border: 0;
 }
@@ -50,14 +46,20 @@ a img {
     z-index: 10;
     position: relative;
     margin: 2em auto; /*width: 1200px;*/
-    width: 60%;
+    width: 750px;
 
 }
-h1 {
+h1 {                    
     color:#777;
+    text-align:center;
+    margin-top:0;
+    background:url(img/excel.gif) no-repeat 0 0;
+    padding-left:15px;
+    padding-top:5px;
+    padding-bottom:5px;
 }
 #content {
-    padding:100px;
+    padding:50px;
     border:solid 10px #ccc;
 }
 
@@ -81,3 +83,43 @@ select {
     text-align:center;
 }
 
+.saved {
+    font-size:0.7em;
+}
+
+.uploader form {
+    padding-left:30px;
+}
+.uploader ul {
+    padding-left:30px;
+}
+.uploader li {
+    background:url(img/done.gif) no-repeat 0 0;
+    padding-left:25px;
+    padding-bottom:2px;
+    padding-top:2px;
+    list-style:none;
+    margin-left:0;
+
+}
+
+.uploader li.error {
+    background:url(img/err.gif) no-repeat 0 0;
+    padding-left:25px;
+    padding-bottom:2px;
+    padding-top:2px;
+    list-style:none;
+    margin-left:0;
+    color:red;
+
+}
+
+/*Help*/
+
+.help {
+    padding-top:2em;
+    font-size:0.7em; 
+    padding-left: 30px;
+    /*text-align:center;*/
+    color:#999;
+}
